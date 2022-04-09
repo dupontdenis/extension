@@ -16,8 +16,8 @@
 	"author": "Jen Looper Denis Dupont",
 	"license": "MIT",
 	"devDependencies": {
-		"webpack": "^4.44.1",
-		"webpack-cli": "^3.3.12"
+		"webpack": "^5.38.1",
+		"webpack-cli": "^4.7.2"
 	},
 	"dependencies": {
 		"axios": "^0.21.1"
