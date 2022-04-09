@@ -30,7 +30,8 @@ const calculateColor = async (value) => {
 
 	let closestColor = table.get(closestKey);
 	console.log(closestColor);
-	chrome.runtime.sendMessage({ action: 'updateIcon', value: { color: closestColor } });
+	results.style.background = closestColor;
+
 };
 
 const displayCarbonUsage = async (apiKey, region) => {
@@ -95,14 +96,6 @@ const init = async () => {
 	//if anything is in localStorage, pick it up
 	const storedApiKey = localStorage.getItem('apiKey');
 	const storedRegion = localStorage.getItem('regionName');
-
-	//set icon to be generic green
-	chrome.runtime.sendMessage({
-		action: 'updateIcon',
-		value: {
-			color: 'green',
-		},
-	});
 
 	if (storedApiKey === null || storedRegion === null) {
 		form.classList.remove("hide");
